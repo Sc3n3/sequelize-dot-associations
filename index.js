@@ -92,7 +92,7 @@ module.exports = (sequelize) => {
     }
 
     static findAndCountAll(options){
-      return super.findAll(this._updateOptions(options)); 
+      return super.findAndCountAll(this._updateOptions(options)); 
     }
 
     static count(options){
