@@ -1,0 +1,27 @@
+{
+  "name": "sequelize-dot-associations",
+  "version": "1.0.0",
+  "description": "Dot notation support for Sequelize associations like Laravel Eloquent",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sc3n3/sequelize-dot-associations.git"
+  },
+  "keywords": [
+    "sequlelize",
+    "dot notation",
+    "associations"
+  ],
+  "author": "Gökay SOLMAN",
+  "license": "MIT",
+    "bugs": {
+    "url": "https://github.com/Sc3n3/sequelize-dot-associations/issues"
+  },
+  "homepage": "https://github.com/Sc3n3/sequelize-dot-associations#readme",
+  "peerDependencies": {
+    "sequelize": "^6.28.1"
+  }
+}
