@@ -69,7 +69,7 @@ module.exports = (sequelize) => {
           }
         }
 
-        association = associations;
+        associations.length && (association = associations);
       }
 
       return association;
