@@ -83,6 +83,14 @@ module.exports = (sequelize) => {
       return options;
     }
 
+    static addScope(name, scope, options){
+      return super.addScope(name, this._updateOptions(scope), options);
+    }
+
+    static create(values, options){
+      return super.create(values, this._updateOptions(options));
+    }
+
     static findOne(options){
       return super.findOne(this._updateOptions(options));
     }

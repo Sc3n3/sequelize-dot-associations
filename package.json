@@ -1,6 +1,6 @@
 {
   "name": "sequelize-dot-associations",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Dot notation support for Sequelize associations like Laravel Eloquent",
   "main": "index.js",
   "scripts": {
