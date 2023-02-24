@@ -60,16 +60,16 @@ module.exports = (sequelize) => {
         const associations = [];
 
         for (const key of Object.keys(association)) {
-          if (Function.isFunction(association[key])) {
-            associations.push(this._parseAssociations(key, association[key].call(null)));
-          } else if (association[key] === true) {
+          if (association[key] === true) {
             associations.push(this._parseAssociations(key));
+          } else if (Function.isFunction(association[key])) {
+            associations.push(this._parseAssociations(key, this._updateOptions(association[key].call(null))));
           } else if (Object.isObject(association[key])) {
-            associations.push(this._parseAssociations(key, association[key]));
+            associations.push(this._parseAssociations(key, this._updateOptions(association[key])));
           }
         }
 
-        associations.length && (association = associations);
+        associations.length && ( association = associations );
       }
 
       return association;
@@ -77,7 +77,7 @@ module.exports = (sequelize) => {
     
     static _updateOptions(options){
       if (options.include) {
-       options.include = this._parseAssociations(options.include);
+        options.include = this._parseAssociations(options.include);
       }
       
       return options;
